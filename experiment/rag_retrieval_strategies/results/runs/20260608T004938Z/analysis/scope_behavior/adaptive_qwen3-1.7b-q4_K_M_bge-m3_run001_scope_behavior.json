@@ -1,0 +1,480 @@
+{
+  "schema_version": "1.0",
+  "status": "completed",
+  "timestamp": "2026-06-08T03:06:48",
+  "source": {
+    "raw_filename": "adaptive_qwen3-1.7b-q4_K_M_bge-m3_run001.json",
+    "raw_sha256": "4ea8298065efd5c75209f0caf55488311406ff4895f8b042e7a332ea87eb0763",
+    "experiment_id": "rag_retrieval_strategies",
+    "run_id": "run_001",
+    "config": {
+      "retrieval_strategy": "adaptive",
+      "llm_model": "qwen3:1.7b-q4_K_M",
+      "embedding_model": "bge-m3",
+      "quantization": "Q4_K_M",
+      "chunk_size": 512,
+      "chunk_overlap": 64,
+      "top_k": 5,
+      "dense_candidates": 20,
+      "max_contexts_per_document": 2,
+      "reranker_max_length": 1024,
+      "temperature": 0.0,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_gpu": -1,
+      "llm_gpu_only": true,
+      "llm_size_bytes": 1917466752,
+      "llm_size_vram_bytes": 1917466752,
+      "llm_thinking_enabled": false,
+      "top_k_llm": 1,
+      "top_p": 0.9,
+      "benchmark_version": "1.0",
+      "query_embedding_mode": "online",
+      "embedding_runtime": "cpu",
+      "embedding_warmup_excluded": true,
+      "embedding_warmup_ms": 11369.42
+    },
+    "benchmark": {
+      "version": "1.0",
+      "hash": "66ef4e5e2eafa08acb37827186e188877b5100deab3a6b06182eaf85e45e060c",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "query_count": 50
+      }
+    },
+    "corpus": {
+      "corpus_hash": "721646c4611818d8f7554faa9e6005b573f296f10d83a608e54f862fbf9f6126"
+    },
+    "hardware": {
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "vram_total_mb": 12288,
+      "driver": "591.86"
+    }
+  },
+  "metric_family": "scope_behavior",
+  "parameters": {
+    "refusal_patterns": [
+      "Informação não encontrada no contexto fornecido."
+    ],
+    "out_of_scope_rule": "source_documents == []",
+    "interpretation": "descriptive_counts_only"
+  },
+  "results": [
+    {
+      "query_id": "Q014",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q035",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q021",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q020",
+      "status": "success",
+      "has_reference_documents": false,
+      "is_out_of_scope": true,
+      "refused": false,
+      "behavior": "improper_answer_without_evidence"
+    },
+    {
+      "query_id": "Q018",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q015",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q008",
+      "status": "success",
+      "has_reference_documents": false,
+      "is_out_of_scope": true,
+      "refused": false,
+      "behavior": "improper_answer_without_evidence"
+    },
+    {
+      "query_id": "Q040",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q011",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q050",
+      "status": "success",
+      "has_reference_documents": false,
+      "is_out_of_scope": true,
+      "refused": false,
+      "behavior": "improper_answer_without_evidence"
+    },
+    {
+      "query_id": "Q049",
+      "status": "success",
+      "has_reference_documents": false,
+      "is_out_of_scope": true,
+      "refused": true,
+      "behavior": "correct_refusal_without_evidence"
+    },
+    {
+      "query_id": "Q047",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q001",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q031",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q044",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q023",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q009",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q022",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q037",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q025",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q016",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q017",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q006",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q042",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q005",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q013",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q029",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q027",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q004",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q034",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q038",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q012",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q026",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q036",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q048",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q028",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q033",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q002",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q041",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q032",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q039",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q046",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q007",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q043",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q024",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q030",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q010",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": true,
+      "behavior": "refusal_with_reference_documents"
+    },
+    {
+      "query_id": "Q045",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q019",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    },
+    {
+      "query_id": "Q003",
+      "status": "success",
+      "has_reference_documents": true,
+      "is_out_of_scope": false,
+      "refused": false,
+      "behavior": "answered_with_reference_documents"
+    }
+  ],
+  "summary": {
+    "total_queries": 50,
+    "successful": 50,
+    "skipped_generation_error": 0,
+    "out_of_scope_count": 4,
+    "answerable_count": 46,
+    "correct_refusal_without_evidence": 1,
+    "improper_answer_without_evidence": 3,
+    "refusal_with_reference_documents": 1,
+    "answered_with_reference_documents": 45
+  },
+  "output": {
+    "sidecar_path": "/app/experiment/rag_retrieval_strategies/results/runs/20260608T004938Z/analysis/scope_behavior/adaptive_qwen3-1.7b-q4_K_M_bge-m3_run001_scope_behavior.json"
+  }
+}

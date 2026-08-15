@@ -1,0 +1,796 @@
+{
+  "schema_version": "1.0",
+  "status": "completed",
+  "timestamp": "2026-06-08T03:06:44",
+  "source": {
+    "raw_filename": "hybrid_qwen3-8b-q4_K_M_bge-m3_run001.json",
+    "raw_sha256": "a38ce095de81850c2bc9c85cc8fcbf3523ddc8aa3b15e87a7a1865127e2a7f91",
+    "experiment_id": "rag_retrieval_strategies",
+    "run_id": "run_001",
+    "config": {
+      "retrieval_strategy": "hybrid",
+      "llm_model": "qwen3:8b-q4_K_M",
+      "embedding_model": "bge-m3",
+      "quantization": "Q4_K_M",
+      "chunk_size": 512,
+      "chunk_overlap": 64,
+      "top_k": 5,
+      "dense_candidates": 20,
+      "max_contexts_per_document": 2,
+      "reranker_max_length": 1024,
+      "temperature": 0.0,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_gpu": -1,
+      "llm_gpu_only": true,
+      "llm_size_bytes": 6005854336,
+      "llm_size_vram_bytes": 6005854336,
+      "llm_thinking_enabled": false,
+      "top_k_llm": 1,
+      "top_p": 0.9,
+      "benchmark_version": "1.0",
+      "query_embedding_mode": "online",
+      "embedding_runtime": "cpu",
+      "embedding_warmup_excluded": true,
+      "embedding_warmup_ms": 11369.42
+    },
+    "benchmark": {
+      "version": "1.0",
+      "hash": "66ef4e5e2eafa08acb37827186e188877b5100deab3a6b06182eaf85e45e060c",
+      "validation": {
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "query_count": 50
+      }
+    },
+    "corpus": {
+      "corpus_hash": "721646c4611818d8f7554faa9e6005b573f296f10d83a608e54f862fbf9f6126"
+    }
+  },
+  "metric_family": "retrieval",
+  "parameters": {
+    "k": 5,
+    "relevance_unit": "document_id",
+    "library": "ir-measures",
+    "library_measures": {
+      "recall_at_5": "R@5",
+      "ndcg_at_5": "nDCG@5"
+    }
+  },
+  "results": [
+    {
+      "query_id": "Q014",
+      "expected_document_ids": [
+        "anexo_V_criterios_avaliacao"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "anexo_V_criterios_avaliacao",
+        "edital_principal",
+        "resolucao_cd_12_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q035",
+      "expected_document_ids": [
+        "in_46_2020_altera_in02"
+      ],
+      "retrieved_document_ids_at_5": [
+        "in_46_2020_altera_in02",
+        "in_261_2025_reserva_vagas",
+        "resolucao_cd_12_ufmt",
+        "in_02_2019_criterios_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q021",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "anexo_V_criterios_avaliacao"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q020",
+      "expected_document_ids": [],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "resolucao_cd_12_ufmt",
+        "edital_principal"
+      ],
+      "status": "skipped_no_reference_documents"
+    },
+    {
+      "query_id": "Q018",
+      "expected_document_ids": [
+        "anexo_I_quadro_vagas"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "anexo_I_quadro_vagas",
+        "retificacao_01_ufmt_only"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q015",
+      "expected_document_ids": [
+        "anexo_II_cronograma"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_principal",
+        "edital_concurso_dou",
+        "retificacao_02_ufmt_only",
+        "decreto_11016_cadunico"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q008",
+      "expected_document_ids": [],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "anexo_V_criterios_avaliacao"
+      ],
+      "status": "skipped_no_reference_documents"
+    },
+    {
+      "query_id": "Q040",
+      "expected_document_ids": [
+        "decreto_6593_isencao_taxa_inscricao"
+      ],
+      "retrieved_document_ids_at_5": [
+        "decreto_6593_isencao_taxa_inscricao",
+        "decreto_7485_banco_professor_equivalente",
+        "lei_12863_altera_l12772",
+        "decreto_9739_normas_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q011",
+      "expected_document_ids": [
+        "anexo_II_cronograma"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "in_02_2019_criterios_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q050",
+      "expected_document_ids": [],
+      "retrieved_document_ids_at_5": [
+        "edital_principal",
+        "edital_concurso_dou",
+        "lei_15142_cotas_ppp"
+      ],
+      "status": "skipped_no_reference_documents"
+    },
+    {
+      "query_id": "Q049",
+      "expected_document_ids": [],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "decreto_9739_normas_concurso"
+      ],
+      "status": "skipped_no_reference_documents"
+    },
+    {
+      "query_id": "Q047",
+      "expected_document_ids": [
+        "edital_principal",
+        "decreto_9739_normas_concurso"
+      ],
+      "retrieved_document_ids_at_5": [
+        "decreto_9739_normas_concurso",
+        "in_02_2019_criterios_concurso",
+        "resolucao_cd_12_ufmt",
+        "decreto_9508_cotas_pcd"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.5,
+      "ndcg_at_5": 0.613147
+    },
+    {
+      "query_id": "Q001",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_principal",
+        "edital_concurso_dou",
+        "lei_13656_isencao_cadunico",
+        "decreto_9739_normas_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q031",
+      "expected_document_ids": [
+        "decreto_6593_isencao_taxa_inscricao"
+      ],
+      "retrieved_document_ids_at_5": [
+        "decreto_6593_isencao_taxa_inscricao",
+        "decreto_9739_normas_concurso",
+        "decreto_9508_cotas_pcd",
+        "decreto_3298_politica_pcd",
+        "in_02_2019_criterios_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q044",
+      "expected_document_ids": [
+        "anexo_VIII_declaracao_indigena"
+      ],
+      "retrieved_document_ids_at_5": [
+        "lei_12863_altera_l12772",
+        "lei_11784_reestruturacao",
+        "lei_12772_magisterio_superior",
+        "edital_principal"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q023",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "lei_8112_estatuto_servidores",
+        "decreto_9739_normas_concurso",
+        "in_02_2019_criterios_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q009",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "anexo_II_cronograma"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q022",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "resolucao_cd_12_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q037",
+      "expected_document_ids": [
+        "resolucao_cd_05_ufmt"
+      ],
+      "retrieved_document_ids_at_5": [
+        "resolucao_cd_12_ufmt",
+        "resolucao_cd_05_ufmt",
+        "edital_concurso_dou",
+        "edital_principal"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q025",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "resolucao_cd_12_ufmt",
+        "anexo_II_cronograma"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q016",
+      "expected_document_ids": [
+        "anexo_II_cronograma"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "resolucao_cd_12_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q017",
+      "expected_document_ids": [
+        "anexo_I_quadro_vagas"
+      ],
+      "retrieved_document_ids_at_5": [
+        "anexo_IV_temas_didatica",
+        "edital_concurso_dou",
+        "retificacao_02_ufmt_only",
+        "retificacao_01_ufmt_only"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q006",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_principal",
+        "lei_13656_isencao_cadunico",
+        "edital_concurso_dou"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q042",
+      "expected_document_ids": [
+        "lei_8112_estatuto_servidores"
+      ],
+      "retrieved_document_ids_at_5": [
+        "lei_8112_estatuto_servidores",
+        "lei_11784_reestruturacao",
+        "lei_12863_altera_l12772",
+        "lei_12772_magisterio_superior"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q005",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "resolucao_cd_12_ufmt",
+        "edital_concurso_dou",
+        "in_02_2019_criterios_concurso",
+        "edital_principal",
+        "decreto_9739_normas_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.430677
+    },
+    {
+      "query_id": "Q013",
+      "expected_document_ids": [
+        "anexo_V_criterios_avaliacao"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "resolucao_cd_12_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q029",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_principal",
+        "edital_concurso_dou",
+        "resolucao_cd_12_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q027",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_principal",
+        "edital_concurso_dou",
+        "resolucao_cd_12_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q004",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_principal",
+        "lei_15142_cotas_ppp",
+        "edital_concurso_dou"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q034",
+      "expected_document_ids": [
+        "decreto_9739_normas_concurso"
+      ],
+      "retrieved_document_ids_at_5": [
+        "decreto_9739_normas_concurso",
+        "in_02_2019_criterios_concurso",
+        "decreto_9508_cotas_pcd",
+        "edital_concurso_dou"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q038",
+      "expected_document_ids": [
+        "resolucao_cd_12_ufmt"
+      ],
+      "retrieved_document_ids_at_5": [
+        "resolucao_cd_12_ufmt",
+        "edital_concurso_dou",
+        "edital_principal",
+        "resolucao_cd_05_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q012",
+      "expected_document_ids": [
+        "anexo_II_cronograma"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "resolucao_cd_12_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q026",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "resolucao_cd_12_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q036",
+      "expected_document_ids": [
+        "portaria_me_10041_2021"
+      ],
+      "retrieved_document_ids_at_5": [
+        "portaria_me_10041_2021",
+        "edital_principal",
+        "edital_concurso_dou",
+        "in_02_2019_criterios_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q048",
+      "expected_document_ids": [
+        "modelo_autodeclaracao",
+        "lei_15142_cotas_ppp"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "lei_15142_cotas_ppp",
+        "edital_principal"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.5,
+      "ndcg_at_5": 0.386853
+    },
+    {
+      "query_id": "Q028",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "anexo_XI_documentos_posse"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q033",
+      "expected_document_ids": [
+        "decreto_9508_cotas_pcd"
+      ],
+      "retrieved_document_ids_at_5": [
+        "decreto_9508_cotas_pcd",
+        "decreto_3298_politica_pcd",
+        "decreto_9739_normas_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q002",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "resolucao_cd_12_ufmt",
+        "edital_principal",
+        "edital_concurso_dou"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q041",
+      "expected_document_ids": [
+        "decreto_9508_cotas_pcd"
+      ],
+      "retrieved_document_ids_at_5": [
+        "decreto_3298_politica_pcd",
+        "decreto_7485_banco_professor_equivalente",
+        "lei_12863_altera_l12772"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q032",
+      "expected_document_ids": [
+        "decreto_7485_banco_professor_equivalente"
+      ],
+      "retrieved_document_ids_at_5": [
+        "decreto_7485_banco_professor_equivalente",
+        "in_02_2019_criterios_concurso",
+        "decreto_9508_cotas_pcd",
+        "decreto_9739_normas_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q039",
+      "expected_document_ids": [
+        "retificacao_01_ufmt_only"
+      ],
+      "retrieved_document_ids_at_5": [
+        "retificacao_01_ufmt_only",
+        "decreto_9739_normas_concurso",
+        "edital_concurso_dou",
+        "in_261_2025_reserva_vagas",
+        "in_02_2019_criterios_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q046",
+      "expected_document_ids": [
+        "anexo_X_laudo_medico"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "lei_12772_magisterio_superior",
+        "lei_12863_altera_l12772",
+        "edital_principal"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q007",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "lei_8112_estatuto_servidores"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q043",
+      "expected_document_ids": [
+        "anexo_VII_nome_social"
+      ],
+      "retrieved_document_ids_at_5": [
+        "lei_12863_altera_l12772",
+        "decreto_7485_banco_professor_equivalente",
+        "edital_principal",
+        "decreto_9739_normas_concurso",
+        "lei_12772_magisterio_superior"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q024",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_principal",
+        "edital_concurso_dou"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 1.0
+    },
+    {
+      "query_id": "Q030",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "in_02_2019_criterios_concurso",
+        "decreto_9739_normas_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q010",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_concurso_dou",
+        "edital_principal",
+        "decreto_9508_cotas_pcd"
+      ],
+      "status": "completed",
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.63093
+    },
+    {
+      "query_id": "Q045",
+      "expected_document_ids": [
+        "anexo_IX_declaracao_quilombola"
+      ],
+      "retrieved_document_ids_at_5": [
+        "lei_11784_reestruturacao",
+        "lei_12863_altera_l12772",
+        "edital_principal",
+        "decreto_9739_normas_concurso"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q019",
+      "expected_document_ids": [
+        "anexo_V_criterios_avaliacao"
+      ],
+      "retrieved_document_ids_at_5": [
+        "edital_principal",
+        "edital_concurso_dou",
+        "resolucao_cd_12_ufmt"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    },
+    {
+      "query_id": "Q003",
+      "expected_document_ids": [
+        "edital_principal"
+      ],
+      "retrieved_document_ids_at_5": [
+        "lei_12863_altera_l12772",
+        "lei_12772_magisterio_superior",
+        "edital_concurso_dou"
+      ],
+      "status": "completed",
+      "recall_at_5": 0.0,
+      "ndcg_at_5": 0.0
+    }
+  ],
+  "summary": {
+    "total_queries": 50,
+    "evaluated_queries": 46,
+    "skipped_queries": 4,
+    "skipped_generation_error": 0,
+    "skipped_no_reference_documents": 4,
+    "metrics": {
+      "recall_at_5": {
+        "count": 46,
+        "mean": 0.673913,
+        "skipped": 4
+      },
+      "ndcg_at_5": {
+        "count": 46,
+        "mean": 0.557234,
+        "skipped": 4
+      }
+    }
+  },
+  "output": {
+    "sidecar_path": "/app/experiment/rag_retrieval_strategies/results/runs/20260608T004938Z/metrics/retrieval/hybrid_qwen3-8b-q4_K_M_bge-m3_run001_retrieval_metrics.json"
+  }
+}
