@@ -1,0 +1,93 @@
+services:
+  ollama:
+    image: ollama/ollama:0.24.0
+    container_name: ollama-gpu
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - OLLAMA_FLASH_ATTENTION=1
+      - OLLAMA_NUM_PARALLEL=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  qdrant:
+    image: qdrant/qdrant:v1.13.2
+    container_name: qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__GRPC_PORT=6334
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "bash -lc 'exec 3<>/dev/tcp/127.0.0.1/6333'"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  rag-pipeline:
+    build:
+      context: ../../..
+      dockerfile: experiment/rag_retrieval_strategies/docker/rag-pipeline/Dockerfile
+    container_name: rag-pipeline
+    depends_on:
+      ollama:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    volumes:
+      - corpus_processed:/app/database/corpus_processado
+      - ../results:/app/experiment/rag_retrieval_strategies/results
+      - huggingface_cache:/root/.cache/huggingface
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+      - PYTHONPATH=/app/experiment/rag_retrieval_strategies/src:/app/database
+      - PYTHONUNBUFFERED=1
+      - CORPUS_DIR=/app/database/corpus_processado
+      - RESULTS_BASE_DIR=/app/experiment/rag_retrieval_strategies/results
+      - BENCHMARK_PATH=/app/experiment/rag_retrieval_strategies/data/benchmark/perguntas_benchmark_edital_docente_ufmt.json
+      - HF_HUB_DISABLE_PROGRESS_BARS=1
+      - TRANSFORMERS_NO_ADVISORY_WARNINGS=1
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      - RAGAS_GOOGLE_MODEL=${RAGAS_GOOGLE_MODEL:-gemini-2.5-flash-lite}
+      - RAGAS_GOOGLE_EMBEDDING_MODEL=${RAGAS_GOOGLE_EMBEDDING_MODEL:-gemini-embedding-001}
+      - RAGAS_MAX_WORKERS=${RAGAS_MAX_WORKERS:-1}
+      - RAGAS_TIMEOUT_SECONDS=${RAGAS_TIMEOUT_SECONDS:-600}
+      - RUN_RAGAS=${RUN_RAGAS:-0}
+      - FORCE_CLEAN_RUN=${FORCE_CLEAN_RUN:-0}
+      - EXPERIMENT_RUN_ID=${EXPERIMENT_RUN_ID:-}
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  ollama_models:
+  qdrant_data:
+  huggingface_cache:
+  corpus_processed:

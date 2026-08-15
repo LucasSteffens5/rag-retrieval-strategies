@@ -1,0 +1,696 @@
+{
+    "version": "1.0",
+    "description": "Benchmark RAG composto por 50 perguntas e respostas esperadas validadas por revisao humana.",
+    "queries": [
+        {
+            "query_id": "Q001",
+            "query": "Qual é o valor exato da taxa de inscrição para participar do concurso?",
+            "expected_answer": "O valor da taxa de inscrição deste Concurso Público é de R$ 200,00 (duzentos reais).",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "5.10"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q002",
+            "query": "Em quais cidades do estado de Mato Grosso serão realizadas as provas escritas?",
+            "expected_answer": "As provas escritas serão realizadas nas cidades de Cuiabá, Barra do Garças e Sinop.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "15.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q003",
+            "query": "Qual é a remuneração total inicial para um Professor Assistente A, com Doutorado, no regime de Dedicação Exclusiva (DE)?",
+            "expected_answer": "A remuneração total é de R$ 14.288,85, composta pelo Vencimento Básico de R$ 6.180,86, Retribuição por Titulação de R$ 7.107,99 e Auxílio Alimentação de R$ 1.000,00.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "4.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q004",
+            "query": "Como serão distribuídas numericamente as vagas iniciais reservadas pela Lei nº 15.142/2025 para as cotas raciais e indígenas?",
+            "expected_answer": "A reserva inicial total de vagas corresponde a 15 (quinze) vagas para pessoas pretas e pardas (25%), 02 (duas) vagas para pessoas indígenas (3%) e 01 (uma) vaga para pessoas quilombolas (2%).",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "10.1",
+                        "10.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q005",
+            "query": "Quais são as três fases do Concurso Público e qual é o caráter (eliminatório/classificatório) de cada uma delas?",
+            "expected_answer": "O concurso compreenderá: a) Prova Escrita (eliminatória e classificatória); b) Prova Didática (eliminatória e classificatória); c) Avaliação de Títulos (unicamente classificatória).",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "1.2",
+                        "15.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q006",
+            "query": "Quais são as condições para que um candidato solicite isenção do pagamento da taxa de inscrição?",
+            "expected_answer": "Há duas condições: a) Pertencer à família inscrita no CadÚnico com renda familiar mensal per capita inferior ou igual a meio salário-mínimo ou renda familiar mensal total de até três salários-mínimos; ou b) Ser doador de medula óssea em entidades reconhecidas pelo Ministério da Saúde.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "6.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q007",
+            "query": "O que acontece se uma candidata lactante não levar um acompanhante adulto para ficar com a criança durante a prova?",
+            "expected_answer": "A candidata que não levar acompanhante não usufruirá do benefício da Lei (amamentação durante a prova) e não poderá permanecer com o lactente no local de realização das provas.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "8.7.2.1",
+                        "8.7.2.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q008",
+            "query": "Qual é o número da sala exata em que cada candidato realizará a Prova Escrita?",
+            "expected_answer": "Informação não encontrada no contexto fornecido.",
+            "source_documents": []
+        },
+        {
+            "query_id": "Q009",
+            "query": "O candidato pode efetuar o pagamento da taxa de inscrição através de depósito bancário comum ou transferência eletrônica?",
+            "expected_answer": "Não. Não serão aceitos, em hipótese alguma, recolhimentos via transferência eletrônica, ordem de pagamento ou depósito comum em conta corrente. O pagamento deve ser exclusivo por boleto ou PIX via QRCode.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "5.5",
+                        "5.6.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q010",
+            "query": "Como será o tempo adicional de prova para um candidato com Deficiência (PcD)?",
+            "expected_answer": "O candidato deve indicar a necessidade no requerimento de inscrição e anexar laudo médico, emitido por especialista, atestando a necessidade de tempo adicional.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "8.10"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q011",
+            "query": "Qual é o período exato para a realização das inscrições pagas?",
+            "expected_answer": "De 13/03/2026 a 05/04/2026.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_II_cronograma",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "Cronograma"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q012",
+            "query": "Em que data será aplicada a Prova Escrita?",
+            "expected_answer": "A aplicação da Prova Escrita ocorrerá no dia 26/04/2026.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_II_cronograma",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "Cronograma"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q013",
+            "query": "Qual é a duração exigida para a apresentação na Prova Didática e qual sua pontuação máxima?",
+            "expected_answer": "A utilização adequada do tempo para apresentação é de 40 a 50 minutos, valendo de 0 a 100 pontos.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_V_criterios_avaliacao",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "Critérios de Avaliação da Prova Didática"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q014",
+            "query": "Qual a pontuação máxima atribuída à avaliação do Plano de Aula na Prova Didática?",
+            "expected_answer": "O Plano de Aula vale de 0 a 10 pontos.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_V_criterios_avaliacao",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "Critérios de Avaliação da Prova Didática"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q015",
+            "query": "Quais são os dias disponíveis no cronograma para que os candidatos façam alteração de cadastro ou dados pessoais?",
+            "expected_answer": "Existem dois períodos para alteração de cadastro: de 14/04/2026 a 15/04/2026 e de 27/04/2026 a 28/04/2026.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_II_cronograma",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "Cronograma"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q016",
+            "query": "Se um candidato não concordar com sua nota na Prova Didática, qual o prazo exato para interpor recurso?",
+            "expected_answer": "O prazo para interposição de recursos contra a pontuação da Prova Didática é das 8 horas do dia 16/06/2026 às 18 horas do dia 17/06/2026.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_II_cronograma",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "Cronograma"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q017",
+            "query": "Quais os requisitos básicos de formação exigidos para a vaga de Educação Física/Dança no Campus Universitário do Araguaia?",
+            "expected_answer": "Graduação em Educação Física com doutorado em Educação, doutorado em Educação Física, doutorado em Ciências do movimento humano, doutorado em Ciências do esporte, doutorado em Ciências do movimento, doutorado em Ciências do movimento humano e reabilitação, doutorado em Educação Física e Esporte, doutorado em Ciências do Exercício e do Esporte, doutorado em Exercício Físico na promoção da saúde. ",
+            "source_documents": [
+                {
+                    "document_id": "anexo_I_quadro_vagas",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "LOTAÇÃO: CAMPUS UNIVERSITÁRIO DO ARAGUAIA"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q018",
+            "query": "Qual é o Regime de Trabalho para a vaga na área de Conhecimento Ciência da Computação/Hardware?",
+            "expected_answer": "O regime de trabalho é Dedicação Exclusiva.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_I_quadro_vagas",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "LOTAÇÃO: CAMPUS UNIVERSITÁRIO DO ARAGUAIA"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q019",
+            "query": "A Prova Didática terá a mesma duração de tempo e avaliação da prova escrita?",
+            "expected_answer": "Não. Os critérios de avaliação são distintos. A prova didática foca no plano de aula, desempenho do candidato, apresentação do tema e uso de 40 a 50 minutos. A prova escrita foca no domínio do conteúdo e objetividade e tem duração de 4 horas.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_V_criterios_avaliacao",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "Critérios de Avaliação"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q020",
+            "query": "Qual será o tema exato cobrado na redação da prova escrita de matemática?",
+            "expected_answer": "Informação não encontrada no contexto fornecido.",
+            "source_documents": []
+        },
+        {
+            "query_id": "Q021",
+            "query": "Qual é a duração total da Prova Escrita?",
+            "expected_answer": "A Prova Escrita terá duração de 04 (quatro) horas.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "16.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q022",
+            "query": "Quantos candidatos serão convocados para a Prova Didática por área de conhecimento?",
+            "expected_answer": "Serão convocados os candidatos classificados na Prova Escrita até o limite de 06 (seis) vezes o número de vagas oferecidas.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "17.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q023",
+            "query": "Qual é o prazo de validade inicial do concurso público?",
+            "expected_answer": "O concurso terá validade de 01 (um) ano, podendo ser prorrogado por igual período.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "26.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q024",
+            "query": "Após quanto tempo do início da prova o candidato poderá levar o seu Caderno de Prova?",
+            "expected_answer": "Somente após transcorridas 3 (três) horas e meia de prova.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "16.8.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q025",
+            "query": "A UFMT fornece equipamentos como data show para a realização da Prova Didática?",
+            "expected_answer": "Não. A UFMT disponibilizará apenas giz ou pincel e quadro. Recursos adicionais como data show são de responsabilidade do candidato.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "17.13",
+                        "17.14"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q026",
+            "query": "Qual a pontuação mínima necessária na Prova Escrita para não ser eliminado do concurso?",
+            "expected_answer": "O candidato deve obter pontuação igual ou superior a 70 (setenta) pontos.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "16.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q027",
+            "query": "Como é composta a Pontuação Final (PF) para classificação do candidato?",
+            "expected_answer": "É a média ponderada das notas da Prova Escrita e Prova Didática, considerando seus pesos, somada à nota da Avaliação de Títulos.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "20.1",
+                        "20.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q028",
+            "query": "A carteira de estudante ou o CPF podem ser utilizados como documento de identificação oficial no dia das provas?",
+            "expected_answer": "Não. O edital proíbe expressamente o uso de carteira de estudante, CPF ou títulos eleitorais como documento de identidade.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "15.7.4"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q029",
+            "query": "Como funciona o sorteio do tema para a Prova Didática e quem deve estar presente?",
+            "expected_answer": "Haverá um único sorteio público realizado pela Supervisão de Concursos. Não é necessária a presença dos candidatos ou seus procuradores.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "17.5.1",
+                        "17.5.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q030",
+            "query": "Onde são publicadas as nomeações dos candidatos aprovados no concurso?",
+            "expected_answer": "O ato de nomeação é publicado no Diário Oficial da União e divulgado na página da PROGEP na aba Nomeações.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "23.2.1",
+                        "23.2.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q031",
+            "query": "Qual e o foco documental de Decreto 6593 no relacionado ao concurso?",
+            "expected_answer": "O documento Decreto 6593 trata de isencao de taxa de inscricao.",
+            "source_documents": [
+                {
+                    "document_id": "decreto_6593_isencao_taxa_inscricao",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q032",
+            "query": "Qual e o foco documental de Decreto 7485 no relacionado ao concurso?",
+            "expected_answer": "O documento Decreto 7485 trata de banco de professor-equivalente das universidades federais.",
+            "source_documents": [
+                {
+                    "document_id": "decreto_7485_banco_professor_equivalente",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q033",
+            "query": "Qual e o foco documental de Decreto 9508 no relacionado ao concurso?",
+            "expected_answer": "O documento Decreto 9508 trata de reserva de vagas para pessoas com deficiencia em concursos publicos.",
+            "source_documents": [
+                {
+                    "document_id": "decreto_9508_cotas_pcd",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q034",
+            "query": "Qual e o foco documental de Decreto 9739 relacionado ao concurso?",
+            "expected_answer": "O documento Decreto 9739 trata de normas gerais para concursos publicos federais.",
+            "source_documents": [
+                {
+                    "document_id": "decreto_9739_normas_concurso",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q035",
+            "query": "Que tipo de procedimento ou regra o documento Instrucao Normativa 46/2020 ajuda a interpretar no concurso?",
+            "expected_answer": "O documento Instrucao Normativa 46/2020 dispõe sobre critérios e procedimentos gerais para autorização de concursos públicos e de provimento de cargos públicos, no âmbito da administração pública federal direta, autárquica e fundacional, e dá outras providências",
+            "source_documents": [
+                {
+                    "document_id": "in_46_2020_altera_in02",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q036",
+            "query": "Que tipo de procedimento ou regra o documento Portaria ME 10041/2021 ajuda a interpretar no concurso?",
+            "expected_answer": "Regulamenta a redução do prazo de antecedência mínima entre a publicação do edital e a realização da primeira prova para 30 dias nos concursos públicos voltados ao provimento de cargos efetivos de docentes (incluindo o Magistério Superior) e técnico-administrativos em instituições federais de ensino",
+            "source_documents": [
+                {
+                    "document_id": "portaria_me_10041_2021",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q037",
+            "query": "Que tipo de procedimento ou regra o documento Resolucao CD 05/UFMT ajuda a interpretar no concurso?",
+            "expected_answer": "Regulamenta o procedimento de organização, entrega e validação dos documentos para a Avaliação de Títulos",
+            "source_documents": [
+                {
+                    "document_id": "resolucao_cd_05_ufmt",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q038",
+            "query": "Que tipo de procedimento ou regra o documento Resolucao CD 12/UFMT ajuda a interpretar no concurso?",
+            "expected_answer": "Dispõe sobre o regulamento para Concurso Público de Provas e Títulos para provimento de cargo na Classe inicial da Carreira do Magistério Superior na Universidade Federal de Mato Grosso.",
+            "source_documents": [
+                {
+                    "document_id": "resolucao_cd_12_ufmt",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q039",
+            "query": "Como o documento Retificacao 01 contribui para interpretar o edital do concurso?",
+            "expected_answer": "O documento Retificacao 01 contribui ao detalhar alteracoes do edital e anexos do concurso docente, complementando a interpretacao do edital.",
+            "source_documents": [
+                {
+                    "document_id": "retificacao_01_ufmt_only",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q040",
+            "query": "O documento Decreto 6593 deve ser descartado como irrelevante para o estudo do concurso docente?",
+            "expected_answer": "Nao. O documento Decreto 6593 e relevante porque trata de isencao de taxa de inscricao em concursos publicos federais.",
+            "source_documents": [
+                {
+                    "document_id": "decreto_6593_isencao_taxa_inscricao",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q041",
+            "query": "O documento Decreto 9508 deve ser descartado como irrelevante para o estudo do concurso docente?",
+            "expected_answer": "Nao. O documento Decreto 9508 e relevante porque trata de reserva de vagas para pessoas com deficiencia em concursos publicos.",
+            "source_documents": [
+                {
+                    "document_id": "decreto_9508_cotas_pcd",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q042",
+            "query": "O documento Lei 8112 deve ser descartado como irrelevante para o estudo do concurso docente?",
+            "expected_answer": "Nao. O documento Lei 8112 e relevante porque trata de regime juridico dos servidores publicos civis da Uniao.",
+            "source_documents": [
+                {
+                    "document_id": "lei_8112_estatuto_servidores",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q043",
+            "query": "Qual e o foco documental de Anexo VII?",
+            "expected_answer": "O documento Anexo VII - Nome Social trata de requerimento de inclusao e uso de nome social.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_VII_nome_social",
+                    "document_level": "C",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q044",
+            "query": "Qual e o foco documental de Anexo VIII?",
+            "expected_answer": "O documento Anexo VIII - Declaracao Indigena trata de declaracao de pertencimento indigena.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_VIII_declaracao_indigena",
+                    "document_level": "C",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q045",
+            "query": "Qual e o foco documental de Anexo IX?",
+            "expected_answer": "O documento Anexo IX - Declaracao Quilombola trata de declaracao de pertencimento quilombola.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_IX_declaracao_quilombola",
+                    "document_level": "C",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q046",
+            "query": "Que tipo de procedimento ou regra o documento Anexo X trata?",
+            "expected_answer": "O documento Anexo X - Laudo Medico ajuda a interpretar procedimentos ou regras relacionados a entrega de laudo medico para candidatos PcD.",
+            "source_documents": [
+                {
+                    "document_id": "anexo_X_laudo_medico",
+                    "document_level": "C",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q047",
+            "query": "Como Edital principal e Decreto 9739 se articulam para orientar procedimentos do concurso?",
+            "expected_answer": "Edital principal trata de regras gerais, inscricao, provas, classificacao, nomeacao e validade do concurso, enquanto Decreto 9739 trata de normas gerais para concursos publicos federais.",
+            "source_documents": [
+                {
+                    "document_id": "edital_principal",
+                    "document_level": "A",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                },
+                {
+                    "document_id": "decreto_9739_normas_concurso",
+                    "document_level": "B",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q048",
+            "query": "Modelo de Autodeclaracao e Lei 15142 sao documentos redundantes que podem ser ignorados na avaliacao?",
+            "expected_answer": "Nao. Modelo de Autodeclaracao trata de autodeclaracao etnico-racial para inscricao em cotas, enquanto Lei 15142 trata de reserva de vagas para pessoas pretas, pardas, indigenas e quilombolas.",
+            "source_documents": [
+                {
+                    "document_id": "modelo_autodeclaracao",
+                    "document_level": "C",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                },
+                {
+                    "document_id": "lei_15142_cotas_ppp",
+                    "document_level": "C",
+                    "relevant_sections": [
+                        "Documento processado"
+                    ]
+                }
+            ]
+        },
+        {
+            "query_id": "Q049",
+            "query": "Qual e o numero da sala exata de cada candidato?",
+            "expected_answer": "Informação não encontrada no contexto fornecido.",
+            "source_documents": []
+        },
+        {
+            "query_id": "Q050",
+            "query": "Qual e o ordem exata de apresentacao dos candidatos em cada area?",
+            "expected_answer": "Informação não encontrada no contexto fornecido.",
+            "source_documents": []
+        }
+    ]
+}
