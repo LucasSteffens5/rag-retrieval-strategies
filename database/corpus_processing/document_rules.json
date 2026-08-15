@@ -1,0 +1,224 @@
+[
+  {
+    "rule_id": "retificacao_01",
+    "exact_name": "Edital de Retificação 01 DOU.pdf",
+    "output_name": "retificacao_01_ufmt_only.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "retificacao_02",
+    "exact_name": "Edital de Retificação 02 DOU.pdf",
+    "output_name": "retificacao_02_ufmt_only.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "retificacao_03",
+    "exact_name": "Edital de Retificação 03 DOU.pdf",
+    "output_name": "retificacao_03_ufmt_only.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "retificacao_04",
+    "exact_name": "Edital de Retificação 04 DOU.pdf",
+    "output_name": "retificacao_04_ufmt_only.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "decreto_7485",
+    "exact_name": "Decreto nº 7485.pdf",
+    "output_name": "decreto_7485_banco_professor_equivalente.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "decreto_6593",
+    "exact_name": "Decreto nº 6593.pdf",
+    "output_name": "decreto_6593_isencao_taxa_inscricao.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "in_46_2020",
+    "exact_name": "INSTRUÇÃO NORMATIVA Nº 46, DE 19 DE JUNHO DE 2020.pdf",
+    "output_name": "in_46_2020_altera_in02.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "resolucao_cd_12",
+    "exact_name": "Resolucao-CD-12-12082016.docx",
+    "output_name": "resolucao_cd_12_ufmt.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "resolucao_cd_05",
+    "exact_name": "Resolucao-CD-5-20092017.docx",
+    "output_name": "resolucao_cd_05_ufmt.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "edital_principal",
+    "exact_name": "EDITAL de Concursos _ após retificação 2 Site.pdf",
+    "output_name": "edital_principal.txt",
+    "level": "A"
+  },
+  {
+    "rule_id": "edital_concurso_dou",
+    "exact_name": "Edital de Concurso DOU.pdf",
+    "output_name": "edital_concurso_dou.txt",
+    "level": "A"
+  },
+  {
+    "rule_id": "anexo_i_quadro_vagas",
+    "exact_name": "Anexo I - Quadro de Vagas - com retificações ed. 03.pdf",
+    "output_name": "anexo_I_quadro_vagas.txt",
+    "level": "A"
+  },
+  {
+    "rule_id": "anexo_ii_cronograma",
+    "exact_name": "Anexo II - Cronograma - Versão 10.04.pdf",
+    "output_name": "anexo_II_cronograma.txt",
+    "level": "A"
+  },
+  {
+    "rule_id": "anexo_iii_conteudo",
+    "exact_name": "Anexo_III_Conteudo_Programatico_Bibliografia.pdf",
+    "output_name": "anexo_III_conteudo_programatico.txt",
+    "level": "A"
+  },
+  {
+    "rule_id": "anexo_iv_temas",
+    "exact_name": "Anexo_IV___Temas_para_a_Prova_Didatica___retificacao_01__e_02.pdf",
+    "output_name": "anexo_IV_temas_didatica.txt",
+    "level": "A"
+  },
+  {
+    "rule_id": "anexo_v_criterios",
+    "exact_name": "Anexo V - Critérios de Avaliação Prova escrita e Didática.pdf",
+    "output_name": "anexo_V_criterios_avaliacao.txt",
+    "level": "A"
+  },
+  {
+    "rule_id": "anexo_vi_titulos",
+    "exact_name": "Anexo VI - Critérios de Avaliação de Títulos.pdf",
+    "output_name": "anexo_VI_criterios_titulos.txt",
+    "level": "A"
+  },
+  {
+    "rule_id": "anexo_xi_posse",
+    "exact_name": "ANEXO_XI__Documento_para_posse_e_exame_de_aptidao_fisica___DOU.pdf",
+    "output_name": "anexo_XI_documentos_posse.txt",
+    "level": "A"
+  },
+  {
+    "rule_id": "lei_8112",
+    "exact_name": "L8112consol.pdf",
+    "output_name": "lei_8112_estatuto_servidores.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "lei_12772",
+    "exact_name": "L12772.pdf",
+    "output_name": "lei_12772_magisterio_superior.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "lei_12863",
+    "exact_name": "L12863.pdf",
+    "output_name": "lei_12863_altera_l12772.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "lei_11784",
+    "exact_name": "L11784.pdf",
+    "output_name": "lei_11784_reestruturacao.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "decreto_9739",
+    "exact_name": "D9739.pdf",
+    "output_name": "decreto_9739_normas_concurso.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "decreto_9508",
+    "exact_name": "9508.pdf",
+    "output_name": "decreto_9508_cotas_pcd.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "in_02_2019_textual",
+    "exact_name": "INSTRUÇÃO NORMATIVA Nº 2, DE 27 DE AGOSTO DE 2019 - INSTRUÇÃO NORMATIVA Nº 2, DE 27 DE AGOSTO DE 2019 - DOU - Imprensa Nacional.pdf",
+    "output_name": "in_02_2019_criterios_concurso.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "in_261_2025",
+    "exact_name": "IN 261 DE 27 DE JUNHO DE 2025.pdf",
+    "output_name": "in_261_2025_reserva_vagas.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "portaria_me_10041",
+    "exact_name": "Portaria_ME_10041_2021_criterios_concurso.pdf",
+    "output_name": "portaria_me_10041_2021.txt",
+    "level": "B"
+  },
+  {
+    "rule_id": "lei_13656",
+    "exact_name": "L13656.pdf",
+    "output_name": "lei_13656_isencao_cadunico.txt",
+    "level": "C"
+  },
+  {
+    "rule_id": "lei_15142",
+    "exact_name": "L15142.pdf",
+    "output_name": "lei_15142_cotas_ppp.txt",
+    "level": "C"
+  },
+  {
+    "rule_id": "decreto_11016",
+    "exact_name": "D11016.pdf",
+    "output_name": "decreto_11016_cadunico.txt",
+    "level": "C"
+  },
+  {
+    "rule_id": "decreto_3298",
+    "exact_name": "D3298.pdf",
+    "output_name": "decreto_3298_politica_pcd.txt",
+    "level": "C"
+  },
+  {
+    "rule_id": "anexo_vii_nome_social",
+    "exact_name": "Anexo VII - Requerimento de Inclusão de uso de nome social.pdf",
+    "output_name": "anexo_VII_nome_social.txt",
+    "level": "C"
+  },
+  {
+    "rule_id": "anexo_viii_indigena",
+    "exact_name": "Anexo VIII - Declaração de Pertencimento Indígena.pdf",
+    "output_name": "anexo_VIII_declaracao_indigena.txt",
+    "level": "C"
+  },
+  {
+    "rule_id": "anexo_ix_quilombola",
+    "exact_name": "Anexo IX - Declaração de Pertencimento Quilombola.pdf",
+    "output_name": "anexo_IX_declaracao_quilombola.txt",
+    "level": "C"
+  },
+  {
+    "rule_id": "anexo_x_laudo",
+    "exact_name": "Anexo X - Entrega de Laudo Médico.pdf",
+    "output_name": "anexo_X_laudo_medico.txt",
+    "level": "C"
+  },
+  {
+    "rule_id": "modelo_autodeclaracao",
+    "exact_name": "MODELODEAUTODECLARAO_corrigido1.pdf",
+    "output_name": "modelo_autodeclaracao.txt",
+    "level": "C"
+  },
+  {
+    "rule_id": "dou_17_04_2026_ufmt_curado",
+    "exact_name": "dou_17_04_2026_secao_3.txt",
+    "output_name": "dou_17_04_2026_secao_3_ufmt.txt",
+    "level": "B"
+  }
+]
