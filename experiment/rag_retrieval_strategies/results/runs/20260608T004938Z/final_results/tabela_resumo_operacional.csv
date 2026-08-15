@@ -1,0 +1,12 @@
+analysis,group,metric,aggregation,numerator,denominator,value
+adaptive_routing,all,routing_ms,median,,450,648.075
+adaptive_routing,hybrid,selected_route_rate,proportion,342,450,0.76
+adaptive_routing,hyde,selected_route_rate,proportion,45,450,0.1
+adaptive_routing,naive,selected_route_rate,proportion,36,450,0.08
+adaptive_routing,reranking,selected_route_rate,proportion,27,450,0.06
+abstention,Qwen3 1.7B,exact_refusal_rate,proportion,15,60,0.25
+abstention,Qwen3 1.7B,false_refusal_rate,proportion,6,690,0.008695652173913044
+abstention,Qwen3 4B,exact_refusal_rate,proportion,46,60,0.7666666666666667
+abstention,Qwen3 4B,false_refusal_rate,proportion,114,690,0.16521739130434782
+abstention,Qwen3 8B,exact_refusal_rate,proportion,45,60,0.75
+abstention,Qwen3 8B,false_refusal_rate,proportion,75,690,0.10869565217391304
