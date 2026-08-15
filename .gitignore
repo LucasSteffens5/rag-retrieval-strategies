@@ -1,7 +1,5 @@
 *.md
 !README.md
-!docs/tasks/*.md
-!docs/artigo_anotacoes_importantes.md
 
 # Ambientes e caches locais
 .env
@@ -13,21 +11,5 @@ venv_rag/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-
-# Artefatos experimentais
-experiment/rag_retrieval_strategies/results/raw/*.json
-experiment/rag_retrieval_strategies/results/ragas/*.json
-experiment/rag_retrieval_strategies/results/aggregated/*.csv
-experiment/rag_retrieval_strategies/results/aggregated/*.jsonl
-experiment/rag_retrieval_strategies/results/reports/*
-experiment/rag_retrieval_strategies/data/checkpoints/*.json
-
-
-*.json
-!experiment/rag_retrieval_strategies/data/benchmark/perguntas_benchmark_edital_docente_ufmt.json
-!database/corpus_processing/document_rules.json
-
-*.txt
-
 # IDEs
 .idea/
